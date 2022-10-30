@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBooking.Services", "RoomBooking.Services\RoomBooking.Services.csproj", "{F11316A2-3ECE-49DE-B28E-065711600A11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBooking.BusinessLogic", "RoomBooking.BusinessLogic\RoomBooking.BusinessLogic.csproj", "{5BBC7A45-FCC2-4790-A6D0-886CABEB68E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBooking.DataAccess", "RoomBooking.DataAccess\RoomBooking.DataAccess.csproj", "{9CE21005-9472-4CD9-AB97-780D1959362D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceLayer", "ServiceLayer", "{0B2082A3-57BC-4ED7-82BC-E47CEE9B60F9}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBooking.BusinessLogic.Interfaces", "RoomBooking.BusinessLogic.Interfaces\RoomBooking.BusinessLogic.Interfaces.csproj", "{763730B1-0AFD-48AA-B57E-A69D9EC31BBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogicLayer", "BusinessLogicLayer", "{C8857E87-594F-4078-8F9B-D0473083ABA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccessLayer", "DataAccessLayer", "{522D77EF-C907-4F2A-9182-C991A861D2E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBooking.DataAccess.Interfaces", "RoomBooking.DataAccess.Interfaces\RoomBooking.DataAccess.Interfaces.csproj", "{40313EBB-4417-4B8A-9BA6-65864DA8CB98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{9BC22E57-873A-48FC-8BF7-A60FE90792F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F11316A2-3ECE-49DE-B28E-065711600A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F11316A2-3ECE-49DE-B28E-065711600A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F11316A2-3ECE-49DE-B28E-065711600A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F11316A2-3ECE-49DE-B28E-065711600A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BBC7A45-FCC2-4790-A6D0-886CABEB68E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBC7A45-FCC2-4790-A6D0-886CABEB68E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBC7A45-FCC2-4790-A6D0-886CABEB68E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBC7A45-FCC2-4790-A6D0-886CABEB68E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CE21005-9472-4CD9-AB97-780D1959362D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE21005-9472-4CD9-AB97-780D1959362D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE21005-9472-4CD9-AB97-780D1959362D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE21005-9472-4CD9-AB97-780D1959362D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{763730B1-0AFD-48AA-B57E-A69D9EC31BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{763730B1-0AFD-48AA-B57E-A69D9EC31BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{763730B1-0AFD-48AA-B57E-A69D9EC31BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{763730B1-0AFD-48AA-B57E-A69D9EC31BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40313EBB-4417-4B8A-9BA6-65864DA8CB98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40313EBB-4417-4B8A-9BA6-65864DA8CB98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40313EBB-4417-4B8A-9BA6-65864DA8CB98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40313EBB-4417-4B8A-9BA6-65864DA8CB98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BC22E57-873A-48FC-8BF7-A60FE90792F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BC22E57-873A-48FC-8BF7-A60FE90792F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BC22E57-873A-48FC-8BF7-A60FE90792F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BC22E57-873A-48FC-8BF7-A60FE90792F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F11316A2-3ECE-49DE-B28E-065711600A11} = {0B2082A3-57BC-4ED7-82BC-E47CEE9B60F9}
+		{5BBC7A45-FCC2-4790-A6D0-886CABEB68E8} = {C8857E87-594F-4078-8F9B-D0473083ABA1}
+		{763730B1-0AFD-48AA-B57E-A69D9EC31BBD} = {C8857E87-594F-4078-8F9B-D0473083ABA1}
+		{9CE21005-9472-4CD9-AB97-780D1959362D} = {522D77EF-C907-4F2A-9182-C991A861D2E6}
+		{40313EBB-4417-4B8A-9BA6-65864DA8CB98} = {522D77EF-C907-4F2A-9182-C991A861D2E6}
+	EndGlobalSection
+EndGlobal

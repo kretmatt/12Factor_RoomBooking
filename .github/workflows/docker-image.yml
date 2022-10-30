@@ -31,5 +31,5 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/12factor_RoomBooking:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/tfroombooking:latest
       

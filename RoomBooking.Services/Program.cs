@@ -24,7 +24,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<RoomBookingContext>(options =>
 {
-    options.UseSqlServer(@"Server=localhost,1433;Database=roombookingdb;User=sa;Password=Strong@Passw0rd;TrustServerCertificate=true");
+    options.UseSqlServer(Environment.GetEnvironmentVariable("ConnectionString")?.Trim('\"')??throw new Exception("There is no connection string for the database"));
 });
 
 builder.Services.AddScoped<IDALRepository<Room>, GenericDALRepository<Room>>();

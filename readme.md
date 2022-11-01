@@ -5,9 +5,9 @@ The main objective was to fulfill at least 8 of the 12 factors from http://12fac
 
 ## How to start the service / application
 
-The codebase of the project is on (Github)[https://github.com/kretmatt/12Factor_RoomBooking]. The containerized service can be found on (Docker Hub)[https://hub.docker.com/r/misterthias/tfroombooking].
+The codebase of the project is on [Github](https://github.com/kretmatt/12Factor_RoomBooking). The containerized service can be found on [Docker Hub](https://hub.docker.com/r/misterthias/tfroombooking).
 
-In order to start the service including the database and an Nginx Loadbalancer, the following command must be executed.
+In order to start the service including the database and an Nginx Loadbalancer, the following command must be executed in the root of this repository.
 
 ````
 docker-compose up --scale roombooking=[Wanted number of RoomBooking APIs]

@@ -15,5 +15,7 @@ docker-compose up --scale roombooking=[Wanted number of RoomBooking APIs]
 
 The command will start the containers as described in the docker-compose.yml file. Once all containers are running, the service is available under http://localhost:8080. To view the swagger page, simply visit http://localhost:8080/swagger/index.html. 
 
+The docker-compose command for starting the service(s), load balancer and database was tested on both Windows and Linux (Ubuntu). In both cases, the command was successfully executed.
+
 ## Factors
 The fulfilled factors including explanations can be found in the factors.md file.

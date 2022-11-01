@@ -4,7 +4,7 @@ services:
     image: "misterthias/tfroombooking"
     restart: always
     expose:
-      - "5000"
+      - "80"
     depends_on:
       - db
     environment:

@@ -147,4 +147,10 @@ public class RoomBusinessLogic:ISimpleCRUDLogic<Room>
         
         _logger.LogInformation("The room was deleted");
     }
+
+    public void Dispose()
+    {
+        _roomBookingUnitOfWork.Dispose();
+        GC.SuppressFinalize(this);
+    }
 }

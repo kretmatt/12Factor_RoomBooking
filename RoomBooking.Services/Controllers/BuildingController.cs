@@ -8,7 +8,7 @@ namespace RoomBooking.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class BuildingController:ControllerBase
+public class BuildingController:ControllerBase, IDisposable
 {
     private ILogger<BuildingController> _logger;
     private ISimpleCRUDLogic<Building> _buildingCRUDLogic;
@@ -128,5 +128,11 @@ public class BuildingController:ControllerBase
             _logger.LogError($"Request can not be fulfilled. Retrieving buildings led to an unexpected error. Error: {e}");
             return StatusCode(500);
         }
+    }
+    
+    public void Dispose()
+    {
+        _buildingCRUDLogic.Dispose();
+        GC.SuppressFinalize(this);
     }
 }

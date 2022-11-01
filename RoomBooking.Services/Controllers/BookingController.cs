@@ -8,7 +8,7 @@ namespace RoomBooking.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class BookingController:ControllerBase
+public class BookingController:ControllerBase, IDisposable
 {
     private ILogger<BookingController> _logger;
     private ISimpleCRUDLogic<Booking> _bookingCRUDLogic;
@@ -128,5 +128,11 @@ public class BookingController:ControllerBase
             _logger.LogError($"Request can not be fulfilled. Retrieving bookings led to an unexpected error. Error: {e}");
             return StatusCode(500);
         }
+    }
+    
+    public void Dispose()
+    {
+        _bookingCRUDLogic.Dispose();
+        GC.SuppressFinalize(this);
     }
 }

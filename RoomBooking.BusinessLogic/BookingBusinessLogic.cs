@@ -147,4 +147,10 @@ public class BookingBusinessLogic:ISimpleCRUDLogic<Booking>
         
         _logger.LogInformation("The booking was deleted");
     }
+
+    public void Dispose()
+    {
+        _roomBookingUnitOfWork.Dispose();
+        GC.SuppressFinalize(this);
+    }
 }

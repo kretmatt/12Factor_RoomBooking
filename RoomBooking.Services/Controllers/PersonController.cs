@@ -8,7 +8,7 @@ namespace RoomBooking.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class PersonController:ControllerBase
+public class PersonController:ControllerBase, IDisposable
 {
     private ILogger<PersonController> _logger;
     private ISimpleCRUDLogic<Person> _personCRUDLogic;
@@ -128,5 +128,11 @@ public class PersonController:ControllerBase
             _logger.LogError($"Request can not be fulfilled. Retrieving people led to an unexpected error. Error: {e}");
             return StatusCode(500);
         }
+    }
+    
+    public void Dispose()
+    {
+        _personCRUDLogic.Dispose();
+        GC.SuppressFinalize(this);
     }
 }

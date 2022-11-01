@@ -6,7 +6,7 @@ using RoomBooking.BusinessLogic.Interfaces;
 
 [ApiController]
 [Route("api/[controller]")]
-public class RoomController:ControllerBase
+public class RoomController:ControllerBase, IDisposable
 {
     private ILogger<RoomController> _logger;
     private ISimpleCRUDLogic<Room> _roomCRUDLogic;
@@ -126,5 +126,11 @@ public class RoomController:ControllerBase
             _logger.LogError($"Request can not be fulfilled. Retrieving rooms led to an unexpected error. Error: {e}");
             return StatusCode(500);
         }
+    }
+
+    public void Dispose()
+    {
+        _roomCRUDLogic.Dispose();
+        GC.SuppressFinalize(this);
     }
 }

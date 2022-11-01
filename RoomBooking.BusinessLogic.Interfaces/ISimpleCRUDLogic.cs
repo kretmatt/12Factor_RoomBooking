@@ -1,6 +1,6 @@
 namespace RoomBooking.BusinessLogic.Interfaces;
 
-public interface ISimpleCRUDLogic<TEntity> where TEntity : class
+public interface ISimpleCRUDLogic<TEntity>:IDisposable where TEntity : class
 {
     IEnumerable<TEntity> ReadAll();
     TEntity ReadById(int id);

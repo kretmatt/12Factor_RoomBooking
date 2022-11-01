@@ -2,17 +2,20 @@ using System.Text.Json.Serialization;
 using Common.Entities;
 using Common.Validators;
 using FluentValidation;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using RoomBooking.BusinessLogic;
 using RoomBooking.BusinessLogic.Interfaces;
 using RoomBooking.DataAccess;
 using RoomBooking.DataAccess.Interfaces;
-using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+});
 builder.Services.AddControllers().AddJsonOptions(x=>x.JsonSerializerOptions.ReferenceHandler=ReferenceHandler.IgnoreCycles);
 builder.Services.AddLogging();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -21,7 +24,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<RoomBookingContext>(options =>
 {
-    options.UseSqlServer(Environment.GetEnvironmentVariable("ConnectionString")?.Trim('\"')??throw new Exception("There is no connection string for the database"));
+    options.UseSqlServer(@"Server=localhost,1433;Database=roombookingdb;User=sa;Password=Strong@Passw0rd;TrustServerCertificate=true");
 });
 
 builder.Services.AddScoped<IDALRepository<Room>, GenericDALRepository<Room>>();
@@ -43,7 +46,7 @@ builder.Services.AddScoped<IValidator<Booking>, BookingValidator>();
 
 
 var app = builder.Build();
-
+app.UseForwardedHeaders();
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
 //{
@@ -55,6 +58,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.UseRouting();
 app.MapControllers();
 
 app.Run();

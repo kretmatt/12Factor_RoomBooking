@@ -23,7 +23,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Common\Common.csproj" />
-      <ProjectReference Include="..\RoomBooking.DataAccess.Entities\RoomBooking.DataAccess.Entities.csproj" />
       <ProjectReference Include="..\RoomBooking.DataAccess.Interfaces\RoomBooking.DataAccess.Interfaces.csproj" />
     </ItemGroup>
 

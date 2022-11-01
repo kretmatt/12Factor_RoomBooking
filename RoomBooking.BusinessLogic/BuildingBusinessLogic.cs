@@ -147,4 +147,10 @@ public class BuildingBusinessLogic:ISimpleCRUDLogic<Building>
         
         _logger.LogInformation("The building was deleted");
     }
+
+    public void Dispose()
+    {
+        _roomBookingUnitOfWork.Dispose();
+        GC.SuppressFinalize(this);
+    }
 }

@@ -147,4 +147,10 @@ public class PersonBusinessLogic:ISimpleCRUDLogic<Person>
         
         _logger.LogInformation("The person was deleted");
     }
+
+    public void Dispose()
+    {
+        _roomBookingUnitOfWork.Dispose();
+        GC.SuppressFinalize(this);
+    }
 }

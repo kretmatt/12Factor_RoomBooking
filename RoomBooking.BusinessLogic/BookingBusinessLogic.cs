@@ -21,7 +21,7 @@ public class BookingBusinessLogic:ISimpleCRUDLogic<Booking>
     
     public IEnumerable<Booking> ReadAll()
     {
-        IEnumerable<Booking> bookings=null;
+        IEnumerable<Booking> bookings;
 
         try
         {
@@ -45,7 +45,7 @@ public class BookingBusinessLogic:ISimpleCRUDLogic<Booking>
 
     public Booking ReadById(int id)
     {
-        Booking booking=null;
+        Booking booking;
 
         try
         {

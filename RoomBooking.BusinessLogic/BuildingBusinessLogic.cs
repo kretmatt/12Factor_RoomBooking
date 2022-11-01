@@ -21,7 +21,7 @@ public class BuildingBusinessLogic:ISimpleCRUDLogic<Building>
     
     public IEnumerable<Building> ReadAll()
     {
-        IEnumerable<Building> buildings=null;
+        IEnumerable<Building> buildings;
 
         try
         {
@@ -45,7 +45,7 @@ public class BuildingBusinessLogic:ISimpleCRUDLogic<Building>
 
     public Building ReadById(int id)
     {
-        Building building=null;
+        Building building;
 
         try
         {

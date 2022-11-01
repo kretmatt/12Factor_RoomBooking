@@ -21,7 +21,7 @@ public class RoomBusinessLogic:ISimpleCRUDLogic<Room>
     
     public IEnumerable<Room> ReadAll()
     {
-        IEnumerable<Room> rooms=null;
+        IEnumerable<Room> rooms;
 
         try
         {
@@ -45,7 +45,7 @@ public class RoomBusinessLogic:ISimpleCRUDLogic<Room>
 
     public Room ReadById(int id)
     {
-        Room room=null;
+        Room room;
 
         try
         {

@@ -21,7 +21,7 @@ public class PersonBusinessLogic:ISimpleCRUDLogic<Person>
     
     public IEnumerable<Person> ReadAll()
     {
-        IEnumerable<Person> people=null;
+        IEnumerable<Person> people;
 
         try
         {
@@ -45,7 +45,7 @@ public class PersonBusinessLogic:ISimpleCRUDLogic<Person>
 
     public Person ReadById(int id)
     {
-        Person person=null;
+        Person person;
 
         try
         {
